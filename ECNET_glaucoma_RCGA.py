@@ -75,7 +75,7 @@ class MyLayer(Layer):
 
 def new_model(m,n,p):
     model=Sequential()
-    model.add(Conv2D(32, kernel_size = (9,9), input_shape = (m,n,p), padding='same'))
+    model.add(Conv2D(32, kernel_size = (5,5), input_shape = (m,n,p), padding='same'))
     model.add(Activation('sigmoid'))
     model.add(MyLayer((n,10)))
     model.add(Flatten())
